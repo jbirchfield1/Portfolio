@@ -14,7 +14,7 @@ function App() {
 
     <Router>
     <div>
-      <nav className='flex gap-2 m-3'>
+      <nav className='flex gap-2 m-3 border-b-2'>
         <Link to="/">Introduction</Link>
         <Link to="/Education">Education</Link>
         <Link to="/Projects">Projects</Link>
