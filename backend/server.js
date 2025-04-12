@@ -27,7 +27,7 @@ const educationSchema = mongoose.Schema({
     description: String,
 });
 
-const education = mongoose.model('Edu', educationSchema);
+const Edu = mongoose.model('Edu', educationSchema, 'education');
 
 //Add routes
 
@@ -36,6 +36,12 @@ app.get('/education', async (req, res) =>{
         const edu = await Edu.find();
         res.json(edu);
     } catch(err){
-        res.status(500).json({message: 'Failed to fetch posts'});
+        res.status(500).json({message: 'Failed to fetch edu'});
     }
+});
+
+//start server
+
+app.listen(PORT, ()=>{
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
