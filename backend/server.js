@@ -23,7 +23,7 @@ mongoose.connect('mongodb://localhost:27017/Portfolio', {
 const educationSchema = mongoose.Schema({
     institution: String,
     degree: String,
-    graduationyear: Number,
+    graduationyear: String,
     description: String,
 });
 

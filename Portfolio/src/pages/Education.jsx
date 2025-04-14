@@ -15,13 +15,13 @@ export default function Education(){
     return(
         <>
         <Header />
-        <h2>Education</h2>
+        <h2 className='bg-blue-600'>Education</h2>
         {edu.map(cert => (
-        <div key={cert.id} style={{border: '1px solid #ccc', padding: '5px'}}>
-          <h3>{cert.degree}</h3>
-          <p>{cert.institution}</p>
-          <p>{cert.graduationyear}</p>
-          <p>{cert.description}</p>
+        <div key={cert.id} style={{border: '3px solid #000', padding: '5px', borderRadius: '5px'}}>
+          <h3>Degree: {cert.degree}</h3>
+          <p>Institution: {cert.institution}</p>
+          <p>Graduation Year: {cert.graduationyear}</p>
+          <p>Description: {cert.description}</p>
           </div>
       ))}
 
