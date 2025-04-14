@@ -17,10 +17,11 @@ export default function Education(){
         <>
         <Header />
         <h2 className='bg-blue-600'>Education</h2>
+        <div className='flex'>
         {edu.map((card,index) => (
             <EducationCard key={index}{...card}/>
         ))}
-
+        </div>
         <Footer />
         </>
     
