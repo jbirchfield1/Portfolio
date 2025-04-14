@@ -27,7 +27,16 @@ const educationSchema = mongoose.Schema({
     description: String,
 });
 
+const contactSchema = mongoose.Schema({
+    name: String,
+    email: String,
+    message: String,
+}, {
+    timestamps: true
+})
+
 const Edu = mongoose.model('Edu', educationSchema, 'education');
+const contact = mongoose.model('contact', contactSchema);
 
 //Add routes
 
@@ -39,6 +48,26 @@ app.get('/education', async (req, res) =>{
         res.status(500).json({message: 'Failed to fetch edu'});
     }
 });
+
+app.get('/contactMessages', async (req, res) =>{
+    try{
+        const messages = await contact.find();
+        res.json(messages);
+    } catch(err){
+        res.status(500).json({message: 'Failed to fetch posts'});
+    }
+});
+
+app.post('/contactMessages', async (req, res) => {
+    try{
+        const {name, email, message} = req.body;
+        const newMessage = new contact({name, email, message});
+        await newMessage.save();
+        res.json(newMessage);
+    } catch (err){
+        res.status(500).json({message: 'Failed to save message.'});
+    }
+})
 
 //start server
 
