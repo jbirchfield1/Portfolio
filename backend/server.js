@@ -35,8 +35,16 @@ const contactSchema = mongoose.Schema({
     timestamps: true
 })
 
+const projectSchema = mongoose.Schema({
+    title: String,
+    description: String,
+    github: String,
+    demo: String,
+})
+
 const Edu = mongoose.model('Edu', educationSchema, 'education');
 const contact = mongoose.model('contact', contactSchema);
+const project = mongoose.model('project', projectSchema);
 
 //Add routes
 
