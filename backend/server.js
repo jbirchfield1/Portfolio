@@ -42,9 +42,15 @@ const projectSchema = mongoose.Schema({
     demo: String,
 })
 
+const skillSchema = mongoose.Schema({
+    name: String,
+    level: String,
+})
+
 const Edu = mongoose.model('Edu', educationSchema, 'education');
-const contact = mongoose.model('contact', contactSchema);
-const project = mongoose.model('project', projectSchema);
+const Contact = mongoose.model('Contact', contactSchema);
+const Project = mongoose.model('Project', projectSchema);
+const Skill = mongoose.model('Skill', skillSchema);
 
 //Add routes
 
@@ -59,7 +65,7 @@ app.get('/education', async (req, res) =>{
 
 app.get('/contactMessages', async (req, res) =>{
     try{
-        const messages = await contact.find();
+        const messages = await Contact.find();
         res.json(messages);
     } catch(err){
         res.status(500).json({message: 'Failed to fetch posts'});
@@ -68,10 +74,19 @@ app.get('/contactMessages', async (req, res) =>{
 
 app.get('/projects', async (req, res) =>{
     try{
-        const projects = await project.find();
+        const projects = await Project.find();
         res.json(projects);
     } catch(err){
         res.status(500).json({message: 'Failed to fetch projects'})
+    }
+})
+
+app.get('/skills', async (req, res) =>{
+    try{
+        const skills = await Skill.find();
+        res.json(skills)
+    } catch(err){
+        res.status(500).json({message: 'Failed to fetch skills'})
     }
 })
 

@@ -1,9 +1,8 @@
 import React from "react";
 
-import React from "react";
 
 
-export default function ProjectCard(name, level){
+export default function ProjectCard({name, level}){
     return(
         <div className="p-2.5 rounded shadow-sm m-1.5 bg-green-200 w-1/3">
             <h3>Skill Name: {name}</h3>
