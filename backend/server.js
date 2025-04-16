@@ -66,6 +66,15 @@ app.get('/contactMessages', async (req, res) =>{
     }
 });
 
+app.get('/projects', async (req, res) =>{
+    try{
+        const projects = await project.find();
+        res.json(projects);
+    } catch(err){
+        res.status(500).json({message: 'Failed to fetch projects'})
+    }
+})
+
 app.post('/contactMessages', async (req, res) => {
     try{
         const {name, email, message} = req.body;
