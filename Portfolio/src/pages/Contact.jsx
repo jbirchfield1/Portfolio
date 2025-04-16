@@ -30,10 +30,17 @@ export default function Contact(){
     return(
         <>
         <Header />
-        <h2>Contact</h2>
+        <h2 className='text-xl'>Contact</h2>
+
+        <p>Here are some ways to contact me:</p>
+        <ul>
+          <li>Email address: <a href="mailto:joshua.birchfield32@gmail.com" className="text-pink-600">joshua.birchfield32@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/joshua-birchfield-b13304295" className="text-pink-600">Joshua Birchfield</a></li>
+          <li>GitHub: <a href="https://github.com/jbirchfield1" className="text-pink-600">Jbirchfield1</a></li>
+        </ul>
 
         <div>
-            <h2>Submit a Message</h2>
+            <h2 className='text-lg'>Submit a Message</h2>
             <form onSubmit={handleSubmit}>
                 <input
                 name = "name"
@@ -59,7 +66,7 @@ export default function Contact(){
                 style ={{width: '100%', padding: '10px', marginBottom: '10px'}}
                 />
 
-                <button type="submit">Submit Post</button>
+                <button type="submit" className='bg-blue-900 text-white rounded-sm w-30 h-8'>Submit Post</button>
             </form>
         </div>
         <Footer />
