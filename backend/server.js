@@ -45,6 +45,7 @@ const projectSchema = mongoose.Schema({
 const skillSchema = mongoose.Schema({
     name: String,
     level: String,
+    images: String,
 })
 
 const Edu = mongoose.model('Edu', educationSchema, 'education');
