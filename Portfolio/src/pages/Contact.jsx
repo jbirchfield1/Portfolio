@@ -24,7 +24,7 @@ export default function Contact(){
           setMessages([...messages, res.data]);
           setForm({name:'', email:'', message:''})
         })
-        .catch(err=>console.error("Error submitting the post:", err));
+        .catch(err=>console.error("Error submitting the message:", err));
       };
 
     return(

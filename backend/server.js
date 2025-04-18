@@ -49,6 +49,8 @@ const skillSchema = mongoose.Schema({
 
 const Edu = mongoose.model('Edu', educationSchema, 'education');
 const Contact = mongoose.model('Contact', contactSchema);
+
+//Consider storing file path for images in database as a string and pass into img tag
 const Project = mongoose.model('Project', projectSchema);
 const Skill = mongoose.model('Skill', skillSchema);
 
@@ -68,7 +70,7 @@ app.get('/contactMessages', async (req, res) =>{
         const messages = await Contact.find();
         res.json(messages);
     } catch(err){
-        res.status(500).json({message: 'Failed to fetch posts'});
+        res.status(500).json({message: 'Failed to fetch Messages'});
     }
 });
 
@@ -93,7 +95,7 @@ app.get('/skills', async (req, res) =>{
 app.post('/contactMessages', async (req, res) => {
     try{
         const {name, email, message} = req.body;
-        const newMessage = new contact({name, email, message});
+        const newMessage = new Contact({name, email, message});
         await newMessage.save();
         res.json(newMessage);
     } catch (err){
