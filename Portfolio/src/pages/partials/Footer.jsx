@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-      <footer className="bg-blue-400 p-4 mt-6 text-center rounded-lg">
+      <footer className="p-4 mt-6 text-center rounded-lg" style={{backgroundColor: '#1b263b'}}>
         <p className="font-bold">Contact Info:</p>
         <ul className="flex flex-wrap gap-3 ml-2 text-sm">
           <li>

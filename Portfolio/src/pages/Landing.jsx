@@ -6,7 +6,7 @@ import Footer from './partials/Footer'
 export default function Landing(){
     return(
 <>
-    <div className='bg-blue-300 text-blue-950 rounded-xl font-mono  max-w-screen-md mx-auto'>
+    <div className='rounded-xl font-mono  max-w-screen-md mx-auto' style={{backgroundColor: '#415a77', color: '#e0e1dd'}}>
       <Header />
       <main className='mt-4'>
         <div className='p-2'>
