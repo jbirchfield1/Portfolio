@@ -39,15 +39,15 @@ export default function Contact(){
           <li>GitHub: <a href="https://github.com/jbirchfield1" className="text-pink-600">Jbirchfield1</a></li>
         </ul>
 
-        <div>
+        <div style={{backgroundColor: '#415a77', borderRadius: '10px'}}>
             <h2 className='text-lg'>Submit a Message</h2>
-            <form onSubmit={handleSubmit}>
+            <form className='text-center' onSubmit={handleSubmit}>
                 <input
                 name = "name"
                 placeholder = "Sender Name"
                 value = {form.name}
                 onChange = {handleChange}
-                style ={{width: '100%', padding: '10px', marginBottom: '10px'}}
+                style ={{width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#778da9', borderRadius: '5px'}}
                 />
 
                 <input 
@@ -55,7 +55,7 @@ export default function Contact(){
                 placeholder="Sender Email"
                 value = {form.email}
                 onChange = {handleChange}
-                style ={{width: '100%', padding: '10px', marginBottom: '10px'}}
+                style ={{width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#778da9', borderRadius: '5px'}}
                 />
 
                 <textarea 
@@ -63,7 +63,7 @@ export default function Contact(){
                 placeholder = "Message Body"
                 value = {form.message}
                 onChange = {handleChange}
-                style ={{width: '100%', padding: '10px', marginBottom: '10px'}}
+                style ={{width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#778da9', borderRadius: '5px'}}
                 />
 
                 <button type="submit" className='bg-blue-900 text-white rounded-sm w-30 h-8'>Submit Post</button>
