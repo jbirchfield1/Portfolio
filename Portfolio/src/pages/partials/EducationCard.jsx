@@ -1,9 +1,11 @@
 import React from "react";
+import './Card.css'
+
 
 
 function EducationCard({institution, degree, graduationyear, description}){
     return(
-        <div className="p-2.5 rounded shadow-sm m-1.5 w-fit">
+        <div className="card">
             <h3>Degree: {degree}</h3>
             <p>Institution: {institution}</p>
             <p>Graduation Year: {graduationyear}</p>

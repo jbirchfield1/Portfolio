@@ -4,6 +4,7 @@ import Footer from './partials/Footer'
 import axios from 'axios'
 import EducationCard from './partials/EducationCard'
 
+
 export default function Education(){
     const [edu, setEdu] = useState([]);
 
@@ -16,8 +17,8 @@ export default function Education(){
     return(
         <>
         <Header />
-        <h2 className='bg-blue-600'>Education</h2>
-        <div className='flex'>
+        <h2>Education</h2>
+        <div className='flex gap-1'>
         {edu.map((card,index) => (
             <EducationCard key={index}{...card}/>
         ))}

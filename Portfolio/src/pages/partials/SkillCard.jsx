@@ -1,10 +1,11 @@
 import React from "react";
+import './Card.css'
 
 
 
 export default function SkillCard({name, level, images}){
     return(
-        <div className="p-2.5 rounded shadow-sm m-1.5 w-fit">
+        <div className="card">
             <h3>Skill Name: {name}</h3>
             <p>Skill level: {level}</p>
             <p>Icon(s): <img src={images}></img></p>
