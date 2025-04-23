@@ -18,7 +18,7 @@ export default function Education(){
         <>
         <Header />
         <h2>Education</h2>
-        <div className='flex gap-1'>
+        <div className='flex gap-1 flex-wrap'>
         {edu.map((card,index) => (
             <EducationCard key={index}{...card}/>
         ))}

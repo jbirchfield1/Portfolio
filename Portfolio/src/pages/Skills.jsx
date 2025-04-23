@@ -16,7 +16,7 @@ export default function Skills(){
         <>
         <Header />
         <h2>Skills</h2>
-        <div className='flex'>
+        <div className='flex flex-wrap'>
             {skills.map((card,index) => (
                 <SkillCard key={index}{...card}/>
             ))}
