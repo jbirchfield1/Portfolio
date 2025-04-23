@@ -40,8 +40,8 @@ export default function Contact(){
         </ul>
 
         <div style={{backgroundColor: '#415a77', borderRadius: '10px'}}>
-            <h2 className='text-lg'>Submit a Message</h2>
-            <form className='text-center' onSubmit={handleSubmit}>
+            <h2 className='text-lg m-1'>Submit a Message</h2>
+            <form className='text-center m-1' onSubmit={handleSubmit}>
                 <input
                 name = "name"
                 placeholder = "Sender Name"
