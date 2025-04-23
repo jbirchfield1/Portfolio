@@ -7,8 +7,12 @@ export default function ProjectCard({title, description, github, demo}){
         <div className="card">
             <h3>Title: {title}</h3>
             <p>Description: {description}</p>
+            {github && (
             <p>Github Link: <a href={github}>{github}</a></p>
+            )}
+            {demo &&(
             <p>Demo Link: <a href={demo}>{demo}</a></p>
+            )}
             <p>Picture(s): Idk how to do this one</p>
         </div>
     );
