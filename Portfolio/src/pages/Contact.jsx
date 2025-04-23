@@ -34,9 +34,9 @@ export default function Contact(){
 
         <p>Here are some ways to contact me:</p>
         <ul>
-          <li>Email address: <a href="mailto:joshua.birchfield32@gmail.com" className="text-pink-600">joshua.birchfield32@gmail.com</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/joshua-birchfield-b13304295" className="text-pink-600">Joshua Birchfield</a></li>
-          <li>GitHub: <a href="https://github.com/jbirchfield1" className="text-pink-600">Jbirchfield1</a></li>
+          <li>Email address: <a href="mailto:joshua.birchfield32@gmail.com">joshua.birchfield32@gmail.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/joshua-birchfield-b13304295">Joshua Birchfield</a></li>
+          <li>GitHub: <a href="https://github.com/jbirchfield1">Jbirchfield1</a></li>
         </ul>
 
         <div style={{backgroundColor: '#415a77', borderRadius: '10px'}}>
