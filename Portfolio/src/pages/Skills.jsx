@@ -15,7 +15,7 @@ export default function Skills(){
     return(
         <>
         <Header />
-        <h2>Skills</h2>
+        <h2 className='text-xl'>Skills</h2>
         <div className='flex flex-wrap'>
             {skills.map((card,index) => (
                 <SkillCard key={index}{...card}/>

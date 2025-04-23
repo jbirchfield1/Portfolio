@@ -40,6 +40,7 @@ const projectSchema = mongoose.Schema({
     description: String,
     github: String,
     demo: String,
+    tech: String,
 })
 
 const skillSchema = mongoose.Schema({

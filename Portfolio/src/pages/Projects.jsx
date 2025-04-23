@@ -18,7 +18,7 @@ export default function Projects(){
     return(
         <>
         <Header />
-        <h2>Projects</h2>
+        <h2 className='text-xl'>Projects</h2>
         <div className='flex flex-wrap'>
         {projects.map((card,index) => (
             <ProjectCard key={index}{...card}/>
