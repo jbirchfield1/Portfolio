@@ -66,7 +66,7 @@ export default function Contact(){
                 style ={{width: '100%', padding: '10px', marginBottom: '10px', backgroundColor: '#778da9', borderRadius: '5px'}}
                 />
 
-                <button type="submit" className='bg-blue-900 text-white rounded-sm w-30 h-8'>Submit Post</button>
+                <button type="submit" className='bg-blue-900 text-white rounded-sm w-30 h-8'>Submit Message</button>
             </form>
         </div>
         <Footer />
