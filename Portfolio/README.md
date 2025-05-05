@@ -4,9 +4,9 @@ This React application serves to provide important details for potential employe
 Setup instructions:
 -Clone the repository to get all necessary files
 -Ensure the database is configured correctly after retrieving it
--Using an IDE (preferably VSCode) open integrated terminals for the backend and frontend folders
+-Using an IDE (preferably VSCode) open integrated terminals for the backend and Portfolio folders
 -Within the backend terminal run "nodemon server.js" to get the routes running
--Within the frontend terminal run "npm run dev" to get the website running and open the given link in the terminal
+-Within the Portfolio terminal run "npm run dev" to get the website running and open the given link in the terminal
 
 Features:
 -Functioning Navbar with links to different pages
