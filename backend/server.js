@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv = require('dotenv');
 
 const app = express();
 const PORT = 5000;
@@ -9,10 +10,11 @@ const PORT = 5000;
 
 app.use(cors());
 app.use(express.json());
+dotenv.config();
 
 //connect to MongoDB
 
-mongoose.connect('mongodb+srv://jbirchfield1:!Ubmsjb26@portfolio.ajohmdi.mongodb.net/PortfolioDB', {
+mongoose.connect(process.env.DB_CONNECTIONSTRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
