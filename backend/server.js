@@ -12,7 +12,7 @@ app.use(express.json());
 
 //connect to MongoDB
 
-mongoose.connect('mongodb://localhost:27017/Portfolio', {
+mongoose.connect('mongodb+srv://jbirchfield1:!Ubmsjb26@portfolio.ajohmdi.mongodb.net/PortfolioDB', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
