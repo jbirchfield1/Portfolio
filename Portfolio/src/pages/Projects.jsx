@@ -9,7 +9,7 @@ export default function Projects(){
     const [projects, setProjects] = useState([]);
     
     useEffect(() => {
-        axios.get('http://localhost:5000/projects')
+        axios.get('https://portfolio-0eav.onrender.com/projects')
         .then(res=> setProjects(res.data))
         .catch(err=> console.error("Error fetching projects:", err));
     }, []);

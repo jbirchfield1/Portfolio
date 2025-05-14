@@ -9,7 +9,7 @@ export default function Education(){
     const [edu, setEdu] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5000/education')
+        axios.get('https://portfolio-0eav.onrender.com/education')
         .then(res=> setEdu(res.data))
         .catch(err=> console.error("Error fetching education:", err));
       }, []);

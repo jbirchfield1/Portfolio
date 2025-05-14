@@ -19,7 +19,7 @@ export default function Contact(){
 
       const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/contactMessages', form)
+        axios.post('https://portfolio-0eav.onrender.com/contactMessages', form)
         .then(res=>{
           setMessages([...messages, res.data]);
           setForm({name:'', email:'', message:''})

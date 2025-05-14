@@ -8,7 +8,7 @@ export default function Skills(){
     const [skills, setSkills] = useState([]);
         
         useEffect(() => {
-            axios.get('http://localhost:5000/skills')
+            axios.get('https://portfolio-0eav.onrender.com/skills')
             .then(res=> setSkills(res.data))
             .catch(err=> console.error("Error fetching skills:", err));
         }, []);
