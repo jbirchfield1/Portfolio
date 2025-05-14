@@ -60,7 +60,7 @@ const Skill = mongoose.model('Skill', skillSchema);
 
 //Add routes
 
-app.get('https://portfolio-0eav.onrender.com/education', async (req, res) =>{
+app.get('/education', async (req, res) =>{
     try{
         const edu = await Edu.find();
         res.json(edu);
@@ -69,7 +69,7 @@ app.get('https://portfolio-0eav.onrender.com/education', async (req, res) =>{
     }
 });
 
-app.get('https://portfolio-0eav.onrender.com/contactMessages', async (req, res) =>{
+app.get('/contactMessages', async (req, res) =>{
     try{
         const messages = await Contact.find();
         res.json(messages);
@@ -78,7 +78,7 @@ app.get('https://portfolio-0eav.onrender.com/contactMessages', async (req, res) 
     }
 });
 
-app.get('https://portfolio-0eav.onrender.com/projects', async (req, res) =>{
+app.get('/projects', async (req, res) =>{
     try{
         const projects = await Project.find();
         res.json(projects);
@@ -87,7 +87,7 @@ app.get('https://portfolio-0eav.onrender.com/projects', async (req, res) =>{
     }
 })
 
-app.get('https://portfolio-0eav.onrender.com/skills', async (req, res) =>{
+app.get('/skills', async (req, res) =>{
     try{
         const skills = await Skill.find();
         res.json(skills)
@@ -96,7 +96,7 @@ app.get('https://portfolio-0eav.onrender.com/skills', async (req, res) =>{
     }
 })
 
-app.post('https://portfolio-0eav.onrender.com/contactMessages', async (req, res) => {
+app.post('/contactMessages', async (req, res) => {
     try{
         const {name, email, message} = req.body;
         const newMessage = new Contact({name, email, message});
