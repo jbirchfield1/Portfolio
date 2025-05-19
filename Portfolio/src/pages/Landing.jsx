@@ -20,7 +20,7 @@ export default function Landing(){
             <li>High School Diploma</li>
             <li>Certificate in Programming</li>
             <li>Associate of Applied Science in Information Technology</li>
-            <li>Bachelor of Science in Computer Science (In Progress)</li>
+            <li>Bachelor of Science in Computer Science</li>
           </ul>
         </div>
       </main>
