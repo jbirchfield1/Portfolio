@@ -9,8 +9,12 @@ export default function Contact(){
 
     useEffect(() => {
         axios.get('http://localhost:5000/contactMessages')
-        .then(res=> setMessages(res.data))
-        .catch(err=> console.error("Error fetching messages:", err));
+        .then(res=> {
+          setMessages(res.data)
+        })
+        .catch(err=> {
+          console.error("Error fetching messages:", err)
+        });
       }, []);
 
       const handleChange = (e) =>{

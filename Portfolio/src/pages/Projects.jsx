@@ -7,11 +7,18 @@ import ProjectCard from './partials/ProjectCard'
 
 export default function Projects(){
     const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
     
     useEffect(() => {
         axios.get('https://portfolio-0eav.onrender.com/projects')
-        .then(res=> setProjects(res.data))
-        .catch(err=> console.error("Error fetching projects:", err));
+        .then(res=> {
+            setProjects(res.data);
+            setLoading(false);
+        })
+        .catch(err=> {
+            console.error("Error fetching projects:", err);
+            setLoading(false);
+        });
     }, []);
 
 
@@ -19,11 +26,15 @@ export default function Projects(){
         <>
         <Header />
         <h2 className='text-xl'>Projects</h2>
+        {loading ? (
+        <p>Loading data... Please Wait</p> 
+      ) : (
         <div className='flex flex-wrap'>
         {projects.map((card,index) => (
             <ProjectCard key={index}{...card}/>
         ))}
         </div>
+      )}
         <Footer />
         </>
     
